@@ -1,0 +1,41 @@
+/*import styled from 'styled-components'
+import {Link as LinkR} from 'react-router-dom'
+
+
+//export const Nav = styled.nav`
+//background:black;
+   // height:80px;
+   // font-size:1rem;
+   // margin-top:0px;
+
+   // @media screen and(max-width:960px){
+       // transition:0.8s all ease;
+//}
+//`
+//export const NavbarContainer = styled.div`
+//display:flex;
+//justify-content:space-between;
+//height:80px;
+
+//width:100%auto;
+
+
+
+//`
+//export const NavLogo = styled(LinkR)`
+//color:white; 
+//font-size:1.5rem;
+//display:flex;
+//`*/
+.nav{
+    background-color:brown;
+    justify-content: space-between;
+    padding-left:'60px';
+
+
+}
+   .Butt1{
+color:blueviolet;
+margin-left:60px;
+}
+
