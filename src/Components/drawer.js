@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { makeStyles,Box, useTheme ,Drawer,AppBar,Toolbar,List,CssBaseline,Typography
 ,IconButton,InputBase,ListItemIcon,ListItem,Badge,Avatar,Button,Link} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+import SettingsIcon from "@material-ui/icons/Settings";
 import {AiFillMessage} from "react-icons/ai";
 import {FaHome} from "react-icons/fa"
 import {HiUserGroup} from "react-icons/hi"
@@ -12,7 +12,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import Tooltip from '@material-ui/core/Tooltip';
 //import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-const drawerWidth = 280;
+const drawerWidth = 190;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -119,7 +119,7 @@ display:'none',
     overflowX:'hidden',
   },  
   drClose:{
-    width:93,
+    width:60,
     backgroundColor:'#50b5ff',
     overflowX:'hidden',
 
@@ -193,30 +193,16 @@ const NavBar= () => {
                    </h6>
                    </Button>
                    </Tooltip>
+                   <Tooltip disableFocusListener title="Paramètres">
 
-                   <Tooltip disableFocusListener title="notifications">
-          <IconButton aria-label="show new notifications"  style={{color:'#50b5ff',paddingTop: 0,
-    paddingBottom: 0,height: 45,top: 7,}}>
-              <Badge badgeContent={7} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>  
-            </Tooltip>
+         <IconButton aria-label="" style={{color:'#50b5ff',paddingTop: 0,
+             paddingBottom: 0,height: 45,top: 7,}}>
 
+    < SettingsIcon/>
 
-
-
-            <Tooltip disableFocusListener title="Message">
-
-            <IconButton aria-label="show new mails" style={{color:'#50b5ff',paddingTop: 0,
-    paddingBottom: 0,height: 45,top: 7,}}>
-              <Badge badgeContent={4} color="secondary">
-                <AiFillMessage />
-              </Badge>
-            </IconButton>
-            </Tooltip>
-
-
+</IconButton>
+</Tooltip>
+            
             <Tooltip disableFocusListener title="Déconnexion">
 
             <IconButton aria-label="" style={{color:'#50b5ff',paddingTop: 0,
@@ -249,15 +235,10 @@ const NavBar= () => {
         <List style={{marginTop:90}}>
 
 
-        <ListItem button style={{paddingLeft: 16,paddingRight: 16,right: 5,left:5,marginBottom:15}}>
+        <ListItem button style={{paddingRight: 16,marginBottom:15}}>
           <ListItemIcon  style={{color:'#fff',display: 'block',marginRight: 10}}>
-          <FaHome style={{marginLeft: 10, marginBottom: 5,fontSize: 21}}/>
-          <Typography style={{color:'#fff',fontSize: 15}} 
-           className={clsx( {
-            [classes.hide]: open,
-          })}
-          
-          >Home</Typography>
+          <FaHome style={{marginLeft: 3, marginBottom: 5,fontSize: 24}}/>
+         
           </ListItemIcon >
           <Typography style={{color:'#fff',fontSize: 18}}
            className={clsx( {
@@ -268,15 +249,10 @@ const NavBar= () => {
 
 
 
-          <ListItem button style={{paddingLeft: 16,paddingRight: 16,right: 5,left:5,marginBottom:15}}>
+          <ListItem button style={{paddingRight: 16,marginBottom:15}}>
           <ListItemIcon  style={{color:'#fff',display: 'block',marginRight: 10}}>
-          <AiFillMessage style={{marginLeft: 10, marginBottom: 5,fontSize: 21}}/>
-          <Typography style={{color:'#fff',fontSize: 15}} 
-           className={clsx( {
-            [classes.hide]: open,
-          })}
+          <AiFillMessage style={{marginLeft: 3, marginBottom: 5,fontSize: 24}}/>
           
-          >Messages</Typography>
           </ListItemIcon >
           <Typography style={{color:'#fff',fontSize: 18}}
            className={clsx( {
@@ -289,15 +265,10 @@ const NavBar= () => {
 
 
 
-          <ListItem button style={{paddingLeft: 16,paddingRight: 16,right: 5,marginBottom:15}}>
+          <ListItem button style={{paddingRight: 16,marginBottom:15}}>
           <ListItemIcon  style={{color:'#fff',display: 'block',marginRight: 10}}>
-          <HiUserGroup style={{marginLeft: 20, marginBottom: 5,fontSize: 21}}/>
-          <Typography style={{color:'#fff',fontSize: 15}} 
-           className={clsx( {
-            [classes.hide]: open,
-          })}
-          
-          >Groupes</Typography>
+          <HiUserGroup style={{marginLeft: 3, marginBottom: 5,fontSize: 24}}/>
+         
           </ListItemIcon >
           <Typography style={{color:'#fff',fontSize: 18}}
            className={clsx( {
@@ -311,15 +282,10 @@ const NavBar= () => {
 
 
 
-          <ListItem button style={{paddingLeft: 10,paddingRight: 16,right: 5,marginBottom:15}}>
+          <ListItem button style={{paddingRight: 16,marginBottom:15}}>
           <ListItemIcon  style={{color:'#fff',display: 'block',marginRight: 10}}>
-          <MdSettings style={{marginLeft: 27, marginBottom: 5,fontSize: 21}}/>
-          <Typography style={{color:'#fff',fontSize: 15 }} 
-           className={clsx( {
-            [classes.hide]: open,
-          })}
+          <MdSettings style={{marginLeft: 3, marginBottom: 5,fontSize: 24}}/>
           
-          >Paramétres</Typography>
           </ListItemIcon >
           <Typography style={{color:'#fff',fontSize: 18}}
            className={clsx( {

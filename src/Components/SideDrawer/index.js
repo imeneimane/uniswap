@@ -27,20 +27,43 @@ import LaptopChromebookIcon from "@material-ui/icons/LaptopChromebook";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
 import image1 from "./image1.jpg";
 import Box from "@material-ui/core/Box";
-//import Card from '@material-ui/core/Card';
-//import PerfectScrollbar from 'react-perfect-scrollbar'
 import image3 from "./image3.jpeg";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-//import ScrollPage from '@material-ui/core';
-//import useMediaQuery from '@material-ui/core/useMediaQuery';
-import TextField from "@material-ui/core/TextField";
+//import TextField from "@material-ui/core/TextField";
+
 
 const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
+ 
+
+  large: {
+    height: 100,
+    width: 100,
+    position: "flex",
+    justify: "center",
+    marginLeft: 80,
+    marginTop: 10,
+  },
+  input: {
+    display: "none",
+  },
+  grid: {
+    marginLeft: 20,
+    marginTop: -2,
+    padding: 10,
+  },
+  paper: {
+    marginLeft: 30,
+    marginRight: 10,
+    width: "109%",
+    borderRadius: 3,
+    height: 250,
+    marginBottom: 2,
+    marginTop: -2,
+    backgroundColor: "#eaeaf0",
+    backgroundImage: `url(${image1})`,
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -49,6 +72,9 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
       backgroundImage: "#ffff",
     }),
+  },
+   root: {
+    display: "flex",
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -107,34 +133,7 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
   },
-  large: {
-    height: 100,
-    width: 100,
-    position: "flex",
-    justify: "center",
-    marginLeft: 80,
-    marginTop: 10,
-  },
-  input: {
-    display: "none",
-  },
-  grid: {
-    marginLeft: 20,
-    marginTop: -2,
-
-    padding: 10,
-  },
-  paper: {
-    marginLeft: 30,
-    marginRight: 10,
-    width: "109%",
-    borderRadius: 3,
-    height: 250,
-    marginBottom: 2,
-    marginTop: -2,
-    backgroundColor: "#eaeaf0",
-    backgroundImage: `url(${image1})`,
-  },
+ 
 
   content: {
     flexGrow: 1,
@@ -156,6 +155,9 @@ export default function MiniDrawer() {
   };
 
   return (
+
+
+    
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
@@ -244,10 +246,9 @@ export default function MiniDrawer() {
             <Typography>Paramètres</Typography>
           </ListItem>
         </List>
-      </Drawer>
+            </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-
         <Grid container  xs={12}>
           <Grid
             xs={3}
@@ -269,7 +270,7 @@ export default function MiniDrawer() {
             </Typography>
             <Typography>
               {" "}
-              <span style={{ fontWeight: 600, marginLeft: 70 }}>
+              <span style={{ fontWeight: 600, marginLeft: 70, marginButtom:20 }}>
                 {" "}
                 200{" "}
               </span>{" "}
@@ -279,7 +280,7 @@ export default function MiniDrawer() {
             <Button
               style={{
                 backgroundImage:
-                  "linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)",
+                "linear-gradient( 95deg,rgb(0,0,70) 0%,rgb(21,153,87) 100%)",
                 color: "#ffff",
                 marginTop: 20,
                 marginButtom: 10,
@@ -293,7 +294,7 @@ export default function MiniDrawer() {
             <Button
               style={{
                 backgroundImage:
-                  "linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)",
+                "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
                 color: "#ffff",
                 marginTop: 20,
                 marginButtom: 50,
@@ -312,6 +313,10 @@ export default function MiniDrawer() {
             </Typography>
             <Typography style={{ marginTop: 20 }}>
               {" "}
+              <span style={{ fontWeight: 600 }}> Age: </span>25
+            </Typography>
+            <Typography style={{ marginTop: 20 }}>
+              {" "}
               <span style={{ fontWeight: 600 }}> Département:</span>{" "}
               Informatique
             </Typography>
@@ -323,6 +328,7 @@ export default function MiniDrawer() {
               {" "}
               <span style={{ fontWeight: 600 }}> Niveau d'étude: </span> Master2
             </Typography>
+          
           </Grid>
 
           <Grid xs={8}>
@@ -385,16 +391,6 @@ export default function MiniDrawer() {
                 </div>
                
             </Grid>
-            
-            <div>
-            
-            <TextField
-              id="outlined-basic"
-              label="biographie"
-              variant="outlined"
-            />
-         
-        </div>
             
           </Grid>
           

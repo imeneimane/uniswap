@@ -1,10 +1,11 @@
-//import { Typography } from '@material-ui/core';
+
 import React from 'react';
 import './App.css';
-import MiniDrawer from './Components/SideDrawer/index'
-//import NavBar from './Components/NavBar';
+//import MiniDrawer from './Components/SideDrawer/index'
+
 //import{BrowserRouter as Router} from 'react-router-dom'
-//import{Router
+import New from './Components/new'
+//import NavBar from  './Components/drawer';
 function App() {
   return (
     <>
@@ -15,9 +16,11 @@ function App() {
      </Router>
    </Switch>
    
-   </BrowserRouter>*/}
+   </BrowserRouter>
 
- <MiniDrawer/>
+ <MiniDrawer/>*/}
+ 
+ <New/>
      </>
     
   );
